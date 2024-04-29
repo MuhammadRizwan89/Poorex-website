@@ -715,6 +715,16 @@ html {
 /*.......... section three end ..........*/
 
 /*................... section four start  ....................*/
+.all_gallery {
+  flex-wrap: wrap;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 8px;
+  place-items: center;
+}
+.all_gallery div {
+  width: 100%;
+}
 .education {
   overflow: hidden;
 }
@@ -757,8 +767,8 @@ html {
   bottom: -8px;
 }
 .all_gallery > div {
-  flex: 0 0 19.22%;
-  max-width: 19.33%;
+  /* flex: 0 0 19.22%;
+  max-width: 19.33%; */
 }
 /*.......... section four end ..........*/
 
@@ -1217,22 +1227,24 @@ html {
 .providing_box_one {
   position: relative;
 }
-.providing_img {
-  position: relative;
-}
 .providing_img img {
+  position: relative;
+  width: 100%;
+}
+/* .providing_img img {
   width: 85%;
   scale: 1.2;
   position: absolute;
   top: 60px;
-}
+} */
 .orang-box {
+  display: flex;
   height: 141px;
   width: 458px;
   background-color: #fe7f4c;
   position: absolute;
-  bottom: -541px;
-  right: 49px;
+  bottom: 0px;
+  right: 0px;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -1259,6 +1271,12 @@ html {
 /*.......... section eight end ..........*/
 
 /*................... section nine start  ....................*/
+.blog_sec-mainBody{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(233px, 100%), 1fr));
+  row-gap: 10px;
+}
+
 .blog-head {
   text-align: center;
 }
@@ -1727,39 +1745,9 @@ html {
 
 /*.......... whatWeDo section end ..........*/
 
-/*.......... extra coading ..........*/
-/*.......... 1399 ..........*/
-
-.donateBtn {
-  padding: 20px 40px !important;
-}
-.nav-link {
-  font-size: 17px;
-}
-.navbar-nav {
-  gap: 5px;
-}
-.add_bar {
-  column-gap: 6rem;
-}
-.content {
-  width: 374px;
-}
-.logo {
-  width: 300px;
-}
-.logo img {
-  left: 45px;
-}
-.main_iner_mcontact {
-  padding-left: 300px;
-}
 /*.......... 1199 ..........*/
 .content h1 {
   font-size: 56px;
-}
-.tp_header-right ul > li:nth-child(2) {
-  padding-left: 5px;
 }
 
 /*.......... Media Query ..........*/
@@ -1775,9 +1763,6 @@ html {
   .navbar-nav {
     gap: 5px;
   }
-  /* .add_bar{
-    column-gap: 6rem;
-  } */
   .content {
     width: 374px;
   }
@@ -1794,7 +1779,7 @@ html {
     padding-left: 300px;
   }
   .tp_header-left span {
-    font-size: clamp(5px 2vw 10px);
+    font-size: clamp(5px, 2vw, 15px);
   }
   .tp_header-left {
     padding-left: 35px;
@@ -1816,18 +1801,18 @@ html {
     width: 90%;
     height: 90%;
   }
-  .blog_sec-img::before{
+  .blog_sec-img::before {
     width: 90%;
     height: 90%;
   }
-  .blog_sec-img{
+  .blog_sec-img {
     background-color: #ffff;
   }
-  .join_hand-text h3{
-    font-size: clamp(34px 2vw 38px);
-    font-size: 34px;
+  .join_hand-text h3 {
+    font-size: clamp(27px, 2vw, 38px);
   }
 }
+
 @media screen and (max-width: 1199px) {
   .content h1 {
     font-size: 56px;
@@ -1838,8 +1823,139 @@ html {
   .btm-right-bar-phoneNum {
     display: none;
   }
+  .tp_header-right ul > li:nth-child(2) {
+    padding-left: 5px;
+  }
+  .tp_header-left span {
+    /* font-size: clamp(10px,1.5vw,20px); */
+    font-size: 14px;
+  }
+  .tp_header-right {
+    /* font-size: clamp(10px,1.5vw,20px); */
+    font-size: 14px;
+  }
+  .main_iner_mcontact {
+    padding-left: 250px;
+  }
+  .add_bar {
+    column-gap: 0;
+  }
+  .logo {
+    width: 250px;
+  }
+  .logo img {
+    position: absolute;
+    left: 45px;
+    top: 70px;
+    width: 10rem;
+  }
+  .content {
+    margin: 0px;
+  }
+  .c1-icon i {
+    padding: 20px;
+    font-size: 27px;
+  }
+  .card_1 {
+    width: 18rem;
+    padding: 30px 30px;
+  }
+  /* .orang-box {
+    position: absolute;
+    bottom: -446px;
+    right: 38px;
+  } */
+  .main_testimonial > .main_card:nth-child(1) {
+    display: none;
+  }
+  .main_testimonial > .main_card:nth-child(3) {
+    display: none;
+  }
+  .Events_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(233px, 100%), 1fr));
+  }
+  .orang-box{
+    display: none;
+  }
 }
 @media screen and (max-width: 991px) {
+  .tp_header-right ul > li:nth-child(2) {
+    display: none;
+  }
+  .bootm_right-bar {
+    display: none;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+  }
+  .donateBtn {
+    margin: 0px;
+  }
+  .card_1 {
+    width: 100%;
+    padding: 30px 50px;
+    margin-bottom: 30px;
+  }
+  .c1-content {
+    justify-content: space-between;
+  }
+  .container_one {
+    padding: 0px;
+  }
+  .container_two {
+    display: inherit;
+  }
+  .education img {
+    width: 100%;
+  }
+  .animation-btn {
+    display: none;
+  }
+  .box_two {
+    justify-content: start;
+    gap: 65px;
+  }
+  .pic1 img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .pic2 {
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+  }
+  .pic2 img {
+    width: 100%;
+  }
+  .container_one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .all_gallery {
+    flex-wrap: wrap;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(325px, 100%), 1fr));
+    gap: 8px;
+    place-items: center;
+  }
+  .all_gallery div {
+    width: 100%;
+  }
+  .sec_eight{
+    background-size: 100% 100%;
+  }
+  .btn-width-height {
+    padding: 18px 58px;
+  }
+  .join_hand-main{
+    align-items: center;
+  }
 }
 @media screen and (max-width: 767px) {
 }

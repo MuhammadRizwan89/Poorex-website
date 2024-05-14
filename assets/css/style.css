@@ -2733,9 +2733,10 @@ table {
 .remember-me button {
   width: 100%;
   border: none;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-weight: 700;
   background-color: #152626;
+  padding: 17px 0;
 }
 .remember-me button:hover {
   background-color: #fe7f4c;
@@ -2753,6 +2754,9 @@ table {
 /*.......... LOGIN PAGE END ..........*/
 
 /*.......... REGISTER PAGE START ..........*/
+.imp-width{
+width: 35%;
+}
 
 
 
@@ -2760,8 +2764,7 @@ table {
 
 
 
-
-/*.......... REGISTER PAGE START ..........*/
+/*.......... REGISTER PAGE END ..........*/
 
 
 /*.......... Media Query ..........*/

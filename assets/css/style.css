@@ -2753,9 +2753,174 @@ table {
 }
 /*.......... LOGIN PAGE END ..........*/
 
-/*.......... REGISTER PAGE START ..........*/
-.imp-width{
-width: 35%;
+/*.......... REGISTER/LOGIN AND ERROR PAGE  ..........*/
+.imp-width {
+  width: 35%;
+}
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-page h4 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  margin: 2rem 0;
+}
+.error-page > button {
+  background-color: #fe7f4c;
+  margin-top: 2rem;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  font-weight: 700;
+}
+.error-page button:hover {
+  background-color: #152626;
+}
+.search-sec {
+  position: relative;
+  width: 100%;
+}
+.search-sec input {
+  margin-top: 1rem;
+  padding: 20px 60px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dde0e0;
+  background-color: #f2f7f7;
+}
+.search-sec button {
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+  border: none;
+  background: #fff;
+  width: 5px;
+  height: 5px;
+}
+.search-sec > button > img {
+  border: none;
+  width: 32px;
+}
+/*.......... REGISTER/LOGIN AND ERROR PAGE END ..........*/
+
+/*.......... Event/Event Details page start ..........*/
+.speaker {
+  display: flex;
+}
+.event-margin {
+  margin-left: 1.5rem;
+  text-align: left;
+}
+.Event_easier-life > h4 {
+  font-size: clamp(30px, 2.5rem, 50px);
+  font-weight: 700;
+  margin: 1.5rem 0 3rem 0;
+}
+.Event_easier-life > p {
+  color: #6e7a7a;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: 500;
+}
+.donate-poorex{
+  position: relative;
+  padding-left: 6rem;
+  margin-top: 2rem;
+}
+.donate-poorex::before{
+  content: "";
+  background-image: url(../images/Event_Details/home.png);
+  filter: invert(67%) sepia(32%) saturate(3781%) hue-rotate(327deg) brightness(101%) contrast(101%);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+}
+:nth-of-type(3)::before{
+  background-image: url(../images/Event_Details/love.png);
+}
+
+.donate-poorex::before:nth-child(1){
+  background-image: url(../images/Event_Details/people.png);
+}
+.donate-poorex h4{
+  font-size: clamp(18px,1vw,40px);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.donate-poorex p{
+  color: #6e7a7a;
+  line-height: 2;
+  font-size: 15px;
+  font-weight: 500;
+}
+.requirment h4{
+  margin-bottom: 1.5rem;
+}
+.Event_donation > button{
+  background-color: #fe7f4c;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 0;
+  font-weight: 700;
+  padding: 15px 45px;
+}
+.Event_donation > button:hover{
+  background-color: #152626;
+}
+.office-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  padding: 3rem;
+  padding-left: 5rem;
+}
+.office-content div:first-child{
+  margin-top: 0;
+}
+.office-content::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #07847f;
+}
+.content_item{
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+.office-icon{
+width: 25px;
+height: 25px;
+}
+.office-icon > img{
+width: 100%;
+filter: invert(38%) sepia(15%) saturate(4849%) hue-rotate(143deg) brightness(91%) contrast(94%);
+}
+.event-detail{
+  margin-left: 1.5rem;
+}
+.event-detail h4{
+font-size: clamp(15px,1.5vw,18px);
+font-weight: 700;
+}
+.event-detail span{
+font-weight: 500;
+color: #6e7a7a;
+font-weight: 500;
+}
+.event_map > iframe{
+  width: 100%;
 }
 
 
@@ -2764,8 +2929,11 @@ width: 35%;
 
 
 
-/*.......... REGISTER PAGE END ..........*/
 
+
+
+
+/*.......... Event/Event Details page end ..........*/
 
 /*.......... Media Query ..........*/
 

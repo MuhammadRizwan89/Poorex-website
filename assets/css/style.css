@@ -196,6 +196,9 @@ html {
 .btm-right-bar-phoneNum a:hover {
   color: #fe7f4c;
 }
+.btm-right-bar-phoneNum span {
+  font-size: 18px;
+}
 .donateBtn {
   padding: 20px 55px !important;
   font-size: 14px !important;
@@ -306,15 +309,10 @@ html {
   color: #ffff;
   margin: 10px;
 }
-
 .nav-link {
   color: #8b9e9e;
   font-size: 18px;
   font-weight: 600;
-}
-.navbar-nav {
-  display: flex;
-  gap: 18px;
 }
 .dropdown-content {
   display: none;
@@ -466,7 +464,6 @@ html {
 }
 .box_one {
   width: 35rem;
-  /* height: 20rem; */
   align-items: flex-start;
 }
 .sec2-porex h4 {
@@ -1584,7 +1581,7 @@ html {
 /* ...........................................pages codding start............................................ */
 
 /*............... Navebar2 start  ................*/
-.logo2 {
+.logo2_mainPage {
   padding: 0px 125px;
 }
 .add_bar2 {
@@ -1682,6 +1679,425 @@ html {
   left: 0px;
 }
 /*................... Banner end  ....................*/
+
+/*................... About_us page start ....................*/
+.images {
+  position: relative;
+}
+.img-one {
+  position: absolute;
+  top: 335px;
+  right: 167px;
+}
+.frame {
+  position: absolute;
+  top: 53px;
+  right: 188px;
+  height: 357px;
+  width: 278px;
+  border: 4px solid #fe7f4c;
+  z-index: -1;
+}
+.frame::before {
+  position: absolute;
+  height: 62px;
+  width: 18px;
+  background-color: #07847f;
+  content: "";
+  left: -144px;
+  bottom: -187px;
+}
+/* ................... */
+.logo-line {
+  border: 0.1px solid rgba(128, 128, 128, 0.263);
+}
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo1 img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+.logo1 img:hover {
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.logo2 img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+.logo2 img:hover {
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.logo3 img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+.logo3 img:hover {
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.logo4 img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+.logo4 img:hover {
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.logo5 img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+.logo5 img:hover {
+  filter: none;
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+.about-porex h4 {
+  color: #fe7f4c;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.about-porex h4::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 15px;
+  background-color: #07847f;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*................... About_us page end ....................*/
+
+/*................... Team page start ....................*/
+.blog-head {
+  text-align: center;
+}
+.volunteer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.wraper{
+padding: 0px 21px;
+position: relative;
+}
+.wraper::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 74.3%;
+    width: 98%;
+    z-index: -1;
+    background-color: #ffff;
+}
+.wraper::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 75%;
+    width: 100%;
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.961) 20%, rgba(254, 126, 76, 0.633) 100%, rgba(255, 255, 255, 0.957) 100%);
+    z-index: -2;
+}
+.expert-name {
+  font-weight: 800;
+}
+.expert {
+    text-align: center;
+}
+.expert span {
+  color: #717d7d;
+}
+.social-media-experts {
+  padding: 5px;
+}
+.social-media-experts a {
+  width: 40px;
+  height: 40px;
+  background-color: #eef3f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  color: #000;
+  text-decoration: none;
+  transition: all ease .5s;
+}
+.social-media-experts a:hover {
+  color: #ffff;
+  background-color: #fe7f4c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*................... Team page end ....................*/
+
+/*................... Team details page start ....................*/
+.team_details-head {
+  text-align: left;
+  padding-top: 120px;
+}
+.team_details {
+  position: relative;
+  padding-left: 20%;
+}
+.team_details::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 10%;
+  height: 94%;
+  width: 50%;
+  background-color: #fe7f4c;
+  z-index: -1;
+}
+/* ................................. */
+.status-performance {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 7rem 7rem;
+  background-color: #f2f7f7;
+}
+.total-donation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donation-icon {
+  width: 90px;
+  height: 90px;
+  background-color: #07847f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.3s;
+}
+.donation-icon img {
+  width: 55px;
+  filter: invert();
+}
+.donation-icon:hover {
+  background-color: #fe7f4c;
+}
+.donation-text {
+  padding-left: 40px;
+}
+.donation-text h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.donation-text p {
+  color: #8b9e9e;
+}
+/* ..................... */
+.registration_form {
+  padding-top: 10rem;
+}
+.input {
+  text-align: start;
+  padding: 15px;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  width: 90%;
+  background-color: #f2f7f7;
+  border: none;
+  outline: none;
+}
+.input2 {
+  display: inline-block;
+  width: 40%;
+  text-align: start;
+  padding: 15px;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  background-color: #f2f7f7;
+  border: none;
+  outline: none;
+}
+.input3 {
+  display: inline-block;
+  width: 40%;
+  text-align: start;
+  padding: 15px;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  background-color: #f2f7f7;
+  border: none;
+  outline: none;
+  margin-left: 10%;
+}
+.Send-Message {
+  padding: 20px 55px !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  background-color: #fe7f4c;
+  margin-right: 25px;
+  border-radius: 0%;
+  border: none;
+}
+.vr-content p {
+  padding-top: 8px;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.donateBtn2 {
+  padding: 20px 55px !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  background-color: #fe7f4c;
+  margin-right: 25px;
+  border-radius: 0%;
+  border: none;
+  margin-top: 30px;
+}
+.progress-main {
+  background-color: #f2f7f7;
+  padding: 32px;
+  margin-top: 55px;
+}
+.blog-head1 ul.navbar-other-content {
+  padding-left: 0;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.event-heading1 h4 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+.event-heading1 p {
+  padding-top: 25px;
+  line-height: 32px;
+  color: #857a7a;
+}
+.team-check {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-check i {
+  font-size: 1rem;
+  color: #fe7f4c;
+}
+/*................... Team details page end ....................*/
+
+/*................... Portfolio_page start ....................*/
+.portfolio_gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.pic-icon img {
+  position: absolute;
+  bottom: 41%;
+  left: 49%;
+  width: 80px;
+  z-index: 1;
+  visibility: hidden;
+}
+.gallery-pic:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.pic-icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #425757ef;
+  visibility: hidden;
+}
+.pic-icon:after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  left: 48%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fe7f4c;
+  visibility: hidden;
+}
+.paging-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 12px;
+  transform: translateY(30px);
+}
+.number-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f2f7f7;
+  font-size: 12px;
+  font-weight: 600;
+}
+.number-btn:hover{
+    background-color: #1e3737;
+    color: #ffff;
+    cursor: pointer;
+}
+.num-btn-highligt {
+  background-color: #1e3737;
+}
+.number-btn i {
+  color: #ffff;
+}
+/*................... Portfolio_page end ....................*/
 
 /*................... faq section start  ....................*/
 .donatebtn-padding {
@@ -1936,7 +2352,7 @@ html {
 .donation-img img {
   width: 100%;
 }
-.donation-text {
+.donation-textt {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -3353,16 +3769,7 @@ margin: 1rem 0 1.5rem 0;
 display: block;
 text-decoration: none;
 color: #ffff;
-}
-
-
-
-
-
-
-
-
-
+}team
 /*.......... contact Page end ..........*/
 
 /*.......... Media Query ..........*/

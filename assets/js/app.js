@@ -1,3 +1,26 @@
+
+const swiper = new swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
 // hamber button
 humburger = document.querySelector('.humburger');
 closebtn = document.querySelector('.closebtn');
@@ -19,3 +42,5 @@ function increment(){
 function decrement(){
     document.querySelector(".minus-btn").innerHTML = count;
 }
+
+

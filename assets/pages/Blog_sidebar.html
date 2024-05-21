@@ -27,12 +27,13 @@
 
     <!-- NaveBar -->
     <div class="main_navbar">
-        <div class="container-fluid p-0">
-            <div class="m_inner-section">
+       
+        <div class="m_inner-section">
 
-                <!-- menu_contact -->
-                <div class="mcontact">
-                    <div class="top_bar">
+            <!-- menu_contact -->
+            <div class="mcontact">
+                <div class="spafic_bar top_barWrap">
+                    <div class="container">
                         <div class="add_bar2">
                             <div class="tp_header-left2">
                                 <ul>
@@ -66,52 +67,59 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bottom-bar">
-                        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                            <div class="container-fluid">
-                                <div class="b-bar-au d-flex align-items-center justify-content-center">
-                                    <div class="logo2"><a href="#"><img src="../images/about/logo-2.png" alt=""></a>
-                                    </div>
-                                    <div>
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Home</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Pages</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Donation</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Events</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Blog</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="navbar-other-content2">
-                                        <div class="bootm_right-bar">
-                                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                                            <a href="#"><i class="fa-regular fa-user"></i></a>
+                </div>
+                <div class="spafic_bar bottom_barWrap">
+                    <div class="container">
+                        <div class="bottom-bar">
+                            <nav class="navbar-expand-lg bg-body-tertiary">
+                                    <div class="b-bar-au d-flex align-items-center justify-content-between">
+                                        <div class="logo2_mainPage"><a href="#"><img src="../images/about/logo-2.png"
+                                                    alt=""></a>
                                         </div>
+                                        <div>
+                                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Home</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Pages</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Donation</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Events</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Blog</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Contact</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="navbar-other-content2">
+                                            <div class="bootm_right-bar">
+                                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                                <a href="#"><i class="fa-regular fa-user"></i></a>
+                                            </div>
 
-                                        <button type="button" class="donateBtn btn btn-primary btn-lg">Donate
-                                            Now</button>
+                                            <button type="button" class="donateBtn btn btn-primary btn-lg">Donate
+                                                Now</button>
+                                            <div class="about_hamburger">
+                                                <i class="fa-solid fa-bars"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </nav>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ....NaveBar end.... -->
+    
+</div>
+<!-- ....NaveBar end.... -->
 
     <!-- .....................Banner start ...................... -->
     <div class="faq_main_banner">
@@ -408,6 +416,30 @@
     <!-- swiper slider -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/app.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+    </script>
 
 </body>
 

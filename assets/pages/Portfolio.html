@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../images/icons-favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/mediaQuery.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -67,7 +67,7 @@
             </div>
             <div class="spafic_bar bottom_barWrap">
                 <div class="container">
-                    <div class="bottom-bar">
+                    <div class="bottom-bar_2">
                         <nav class="navbar-expand-lg bg-body-tertiary">
                                 <div class="b-bar-au d-flex align-items-center justify-content-between">
                                     <div class="logo2_mainPage"><a href="#"><img src="../images/about/logo-2.png"
@@ -138,19 +138,25 @@
             <div class="row">
                 <div class="portfolio_gallery">
                     <div class="gallery-pic">
-                        <img src="../images/portfolio gallery/gal-3-1.jpg" alt="">
+                        <a data-fancybox="gallery" href="../images/portfolio gallery/gal-3-1.jpg">
+                            <img src="../images/portfolio gallery/gal-3-1.jpg" alt="">
+                        </a>
                         <div class="pic-icon">
                            <img src="../images/portfolio gallery/arrow.svg" alt="">
                         </div>
                     </div>
                     <div class="gallery-pic">
-                        <img src="../images/portfolio gallery/gal-3-2.jpg" alt="">
+                        <a data-fancybox="gallery" href="../images/portfolio gallery/gal-3-2.jpg">
+                         <img src="../images/portfolio gallery/gal-3-2.jpg" alt="">
+                        </a>
                         <div class="pic-icon">
                            <img src="../images/portfolio gallery/arrow.svg" alt="">
                         </div>
                     </div>
                     <div class="gallery-pic">
-                        <img src="../images/portfolio gallery/gal-3-3.jpg" alt="">
+                        <a data-fancybox="gallery" href="../images/portfolio gallery/gal-3-3.jpg" >   
+                            <img src="../images/portfolio gallery/gal-3-3.jpg" alt="">
+                        </a>
                         <div class="pic-icon">
                            <img src="../images/portfolio gallery/arrow.svg" alt="">
                         </div>
@@ -303,7 +309,10 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind();    
+    </script>
     <script src="./assets/js/app.js"></script>
 </body>
 

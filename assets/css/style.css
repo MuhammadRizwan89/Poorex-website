@@ -109,7 +109,7 @@ html {
 
 /*................... Navebar start ................*/
 .logo {
-  height: 171px;
+  height: 156px;
   width: 335px;
   background: #07847f;
   position: absolute;
@@ -120,11 +120,17 @@ html {
   top: 58px;
   left: 50px;
 }
-.bottom-bar {
-  background: #ffff;
-  padding: 14px 0;
+.index_navbar {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 .top_barWrap {
+  background-color: #f2f7f7;
+}
+.bottom_barWrap{
   background-color: #f2f7f7;
 }
 .magnifying a {
@@ -222,6 +228,11 @@ html {
 .m_inner-section {
   display: flex;
 }
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .mcontact {
   width: 100%;
 }
@@ -244,15 +255,14 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #083c3a;
   color: #8b9e9e;
   line-height: 42px;
   background-color: #1e3737;
-  column-gap: 14rem;
+  padding: 0px 20px;
 }
-.tp_header-left {
+/* .tp_header-left {
   padding-left: 35px;
-}
+} */
 
 .tp_header-left ul {
   margin-bottom: 0px;
@@ -273,7 +283,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 25px;
 }
 
 .tp_header-right div a i {
@@ -285,6 +294,7 @@ html {
   color: #8b9e9e;
   font-size: 18px;
   font-weight: 600;
+  padding: 31px 0;
 }
 .navbar-nav {
   display: flex;
@@ -323,25 +333,55 @@ html {
 .has_menu {
   position: relative;
 }
-
+.sub_menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 5px;
+  background-color: #fe7f4c;
+}
+.sub_menu::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 220px;
+  width: 20px;
+  height: 20px;
+  background-color: #fe7f4c;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
 .sub_menu {
   list-style: none;
   position: absolute;
-  background-color: #849b9aa8;
+  top: 88px;
+  left: 0;
+  padding: 25px;
+  width: 15rem;
+  background-color: #ffff;
   text-decoration: none;
-  text-align: center;
-  color: cadetblue;
-  transform: translate(-30px, 31px);
+  text-align: start;
+  font-size: 12px;
   visibility: hidden;
   opacity: 0;
-  border-radius: 10px;
-  padding: 10px;
   z-index: 1;
+}
+.sub_menu li a {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  line-height: 3;
+  font-size: 14px;
+}
+.sub_menu li a:hover {
+  color: #fe7f4c;
 }
 .has_menu:hover ul.sub_menu {
   cursor: pointer;
   visibility: visible;
   opacity: 1;
+  transition: all ease 0.5s;
 }
 .sub_menu li {
   text-decoration: none;
@@ -1721,29 +1761,38 @@ html {
 .images {
   position: relative;
 }
-.img-one {
+.images::before {
+  content: "";
   position: absolute;
-  top: 335px;
-  right: 167px;
-}
-.frame {
-  position: absolute;
-  top: 53px;
-  right: 188px;
+  top: 3rem;
+  left: 11rem;
   height: 357px;
   width: 278px;
   border: 4px solid #fe7f4c;
-  z-index: -1;
 }
-.frame::before {
+.images::after {
   position: absolute;
   height: 62px;
   width: 18px;
   background-color: #07847f;
   content: "";
-  left: -144px;
-  bottom: -187px;
+  top: 33rem;
+  left: 3rem;
 }
+.img-one img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(70%, 2vw, 100%);
+}
+.img-one img:last-child {
+  position: absolute;
+  top: 335px;
+  left: 95px;
+
+  width: clamp(70%, 2vw, 100%);
+}
+
 /* ................... */
 .logo-line {
   border: 0.1px solid rgba(128, 128, 128, 0.263);
@@ -3947,7 +3996,9 @@ table {
     transform: translateX(0);
     visibility: visible;
   }
-
+  .logo5 {
+    display: none;
+  }
   .content h1 {
     font-size: 56px;
   }
@@ -4051,6 +4102,10 @@ table {
   .orang-box {
     display: none;
   }
+  images::before,
+  ::after {
+    display: none;
+  }
   /* .............header2............... */
   .spafic_bar .navbar-nav {
     gap: 30px;
@@ -4125,7 +4180,12 @@ table {
     align-items: start;
     justify-content: start;
   }
-
+  .logo5 {
+    display: none;
+  }
+  .logo4 {
+    display: none;
+  }
   .all_gallery {
     flex-wrap: wrap;
     display: grid !important;
@@ -4137,7 +4197,24 @@ table {
     width: 100%;
   }
   .sec_eight {
-    background-size: 100% 100%;
+    background-size: 100%;
+  }
+  .img-one img:first-child {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .img-one img:last-child {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 30px 0;
+    width: 100%;
+  }
+  images::before,
+  ::after {
+    display: none;
   }
   .btn-width-height {
     padding: 18px 58px;
@@ -4152,7 +4229,7 @@ table {
     display: none;
   }
   .logo {
-    height: 130px;
+    height: 114px;
   }
   .logo img {
     top: 50px;
@@ -4250,10 +4327,19 @@ table {
   .tp_header-right2 > div:nth-child(2) {
     display: none;
   }
-  .donateBtn{
+  .logo5 {
     display: none;
   }
-  .add_bar2{
+  .logo4 {
+    display: none;
+  }
+  .logo3 {
+    display: none;
+  }
+  .donateBtn {
+    display: none;
+  }
+  .add_bar2 {
     justify-content: center;
   }
 }

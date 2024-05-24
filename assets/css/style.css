@@ -130,7 +130,7 @@ html {
 .top_barWrap {
   background-color: #f2f7f7;
 }
-.bottom_barWrap{
+.bottom_barWrap {
   background-color: #f2f7f7;
 }
 .magnifying a {
@@ -2109,42 +2109,50 @@ html {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+.gallery-pic {
   position: relative;
+  overflow: hidden;
 }
-
-.pic-icon img {
-  position: absolute;
-  bottom: 41%;
-  left: 49%;
-  width: 80px;
-  z-index: 1;
-  visibility: hidden;
-}
-.gallery-pic:hover {
-  visibility: visible;
-  opacity: 1;
-}
-.pic-icon:before {
+.gallery-pic::before {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  background-color: #425757ef;
+  width: 100%;
+  height: 100%;
   visibility: hidden;
+  opacity: 0;
+  background-color: #485b5bdb;
+  transform: translateY(-25rem);
+  transition: all 0.5s;
 }
-.pic-icon:after {
+.gallery-pic:hover.gallery-pic::before {
+  transform: translateY(-1rem);
+  visibility: visible;
+  opacity: 1;
+}
+.gallery-pic::after {
   content: "";
+  background-image: url(../images/portfolio-gallery/arrow.png);
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
   position: absolute;
-  top: 47%;
-  left: 48%;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #fe7f4c;
+  top: 10rem;
+  left: 9rem;
   visibility: hidden;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+  scale: 0.5;
 }
+.gallery-pic:hover.gallery-pic::after {
+  visibility: visible;
+  opacity: 1;
+  z-index: 999999;
+  scale: 1;
+}
+
 .paging-number {
   display: flex;
   align-items: center;
@@ -2191,6 +2199,64 @@ html {
   justify-content: center;
   row-gap: 20px;
 }
+/* .........acordian.......... */
+.costom_acordian .accordion-item {
+  margin-bottom: 20px;
+  box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+}
+.costom_acordian .collapsed {
+  position: relative;
+  z-index: 99;
+}
+.costom_acordian .accordion-button {
+  width: 100%;
+  padding: 25px 115px;
+  padding-left: 75px;
+  background-color: #ffff;
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+}
+.costom_acordian .accordion-button::after {
+  content: "";
+  background-image: url(../images/faq_section/minus.png);
+  filter: invert(82%) sepia(61%) saturate(7394%) hue-rotate(336deg)
+    brightness(127%) contrast(99%);
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.costom_acordian .accordion-button.collapsed::after {
+  background-image: url(../images/faq_section/plus.png);
+}
+h2.accordion-header button {
+  font-weight: 700;
+  font-size: 0px;
+}
+.costom_acordian .accordion-body {
+  position: relative;
+  background-color: #ffff;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 55px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  z-index: 1;
+}
+.costom_acordian .accordion-body::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 70px;
+  width: 1px;
+  height: 85px;
+  background-color: #fe7f4c;
+}
+/* ................................... */
 .minus_plus-box {
   position: relative;
   padding: 25px;
@@ -2198,7 +2264,7 @@ html {
   background-color: #ffff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding-left: 4rem;
-  padding-right: 8rem;
+  padding-right: 55px;
 }
 .minus_plus-box::after {
   position: absolute;
@@ -2273,9 +2339,6 @@ html {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%)
     contrast(103%);
 }
-.whatWeDo_card:hover .card_icon {
-  background-color: #fe7f4c;
-}
 .whatWeDo-cardImg {
   width: 100%;
   height: 231px;
@@ -2294,7 +2357,7 @@ html {
   visibility: hidden;
   opacity: 0;
 }
-.whatWeDo-cardImg:hover::after {
+.whatWeDo_card:hover .whatWeDo-cardImg::after {
   visibility: visible;
   opacity: 1;
   transform: translateY(0px);
@@ -2331,15 +2394,31 @@ html {
   top: 185px;
   transition: all ease 0.5s;
   cursor: pointer;
+  overflow: hidden;
 }
-/* .card_icon:hover {
+.card_icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   background-color: #fe7f4c;
-} */
+  transform: translateY(-80px);
+  visibility: hidden;
+  opacity: 0;
+}
+.whatWeDo_card:hover .card_icon::before {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
 .card_icon img {
   transform: translate(21px, 20px);
   width: 35px;
 }
-
 .whatWeDo_card-text {
   text-align: center;
   padding: 51px;
@@ -4051,11 +4130,9 @@ table {
     padding-left: 5px;
   }
   .tp_header-left span {
-    /* font-size: clamp(10px,1.5vw,20px); */
     font-size: 14px;
   }
   .tp_header-right {
-    /* font-size: clamp(10px,1.5vw,20px); */
     font-size: 14px;
   }
   .main_iner_mcontact {
@@ -4084,21 +4161,16 @@ table {
     width: 18rem;
     padding: 30px 30px;
   }
-  /* .orang-box {
-    position: absolute;
-    bottom: -446px;
-    right: 38px;
-  } */
   .main_testimonial > .main_card:nth-child(1) {
     display: none;
   }
   .main_testimonial > .main_card:nth-child(3) {
     display: none;
   }
-  .Events_cards {
+  /* .Events_cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(233px, 100%), 1fr));
-  }
+  } */
   .orang-box {
     display: none;
   }
@@ -4118,7 +4190,6 @@ table {
     padding: 11px;
     margin-left: 20px;
   }
-
   .navbar-nav {
     display: none;
   }

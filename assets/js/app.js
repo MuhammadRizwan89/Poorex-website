@@ -2,7 +2,8 @@
 // hamber button
 humburger = document.querySelector('.humburger');
 closebtn = document.querySelector('.closebtn');
-
+console.log(humburger);
+console.log(closebtn);
 humburger.addEventListener('click', function(){
     document.querySelector('.tpoffcanvas-area').classList.add('active');
 })
@@ -21,3 +22,11 @@ function decrement(){
     document.querySelector(".minus-btn").innerHTML = count;
 }
 
+//hamburger navbar2
+
+aboutHamburger = document.querySelector('.about_hamburger');
+
+aboutHamburger.addEventListener('click', function(){
+    document.querySelector('.navbar-nav').classList.toggle('menu');
+
+})

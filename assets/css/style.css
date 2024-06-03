@@ -86,7 +86,7 @@ li.has-dropdown ul li {
   color: #878393;
   font-weight: 500;
 }
-li.has-dropdown > ul > li:hover{
+li.has-dropdown > ul > li:hover {
   color: #fe7f4c;
 }
 /* li.tp-submenu {
@@ -529,7 +529,7 @@ ul.index_navbar > li {
 
 .content h1 {
   color: #ffff;
-  font-size:clamp(45px,3vw,80px);
+  font-size: clamp(45px, 5vw, 80px);
   font-weight: 600;
 }
 .transbox {
@@ -573,11 +573,11 @@ ul.index_navbar > li {
   align-items: center;
 }
 .card_1 {
-  width: 25rem;
   background-color: #ffff;
-  padding: 40px 60px;
+  padding: 30px 40px;
 }
 .c1-hedding h4 {
+  font-size: clamp(23px, 2vw, 40px);
   margin-top: 10px;
   font-weight: 700;
   color: #1e3737;
@@ -848,6 +848,8 @@ ul.index_navbar > li {
 
 .tag-img {
   overflow: hidden;
+  max-height: 350px;
+  height: 280px;
 }
 .tag-img > img {
   width: 100%;
@@ -911,13 +913,11 @@ ul.index_navbar > li {
   margin-bottom: 0;
 }
 .full-card {
-  padding: 25px;
+  /* padding: 25px; */
   margin-top: auto;
   box-shadow: 1px 1.464px 20px 0px rgba(14, 5, 1, 0.04);
 }
-.sec3-upperCard {
-  width: 20rem;
-}
+
 .sec3-percentage {
   display: flex;
   justify-content: end;
@@ -1238,18 +1238,39 @@ ul.index_navbar > li {
 .title_text {
   text-align: center;
 }
-.event-text {
-  font-weight: 600;
-  color: #fe7f4c;
-}
-.event-heading h4 {
-  font-size: clamp(25px, 2vw, 50px);
+.event-text > h4 {
+  font-size: clamp(25px, 4vw, 50px);
   font-weight: 900;
   margin-bottom: 50px;
 }
+.registration-pic img {
+  width: 100%;
+}
+.volunteer-registration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tag-img::after {
+  content: "";
+  inset: 100%;
+  background-color: yellow;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s;
+}
+/* .tag-img:hover.tag-img::after{
+  visibility: visible;
+  opacity: 1;
+  inset: 0;
+} */
+
 .subTitle {
   font-size: 16px;
-  color: var(#fe7f4c);
+  color: #fe7f4c;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -1773,9 +1794,9 @@ ul.index_navbar > li {
   color: #1e3737;
   margin: 10px;
 }
-.tp_header-left2 {
+/* .tp_header-left2 {
   padding-left: 10%;
-}
+} */
 .spafic_bar .tp_header-left2 {
   padding-left: 0px;
 }
@@ -1813,11 +1834,6 @@ ul.index_navbar > li {
   padding: 8.5rem 0;
 }
 
-.content h1 {
-  color: #ffff;
-  font-size: 80px;
-  font-weight: 600;
-}
 .faq-transbox {
   display: block;
   font-size: clamp(12px, 1vw, 17px);
@@ -2063,10 +2079,7 @@ ul.index_navbar > li {
 }
 /* ................................. */
 .status-performance {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 7rem 7rem;
+  padding: 7rem 0;
   background-color: #f2f7f7;
 }
 .total-donation {
@@ -2091,18 +2104,22 @@ ul.index_navbar > li {
   background-color: #fe7f4c;
 }
 .donation-text {
-  padding-left: 40px;
+  margin-left: 40px;
 }
 .donation-text h2 {
-  font-size: 50px;
+  font-size: clamp(22px, 3vw, 44px);
   font-weight: 700;
 }
 .donation-text p {
   color: #8b9e9e;
 }
 /* ..................... */
-.registration_form {
+/* .registration_form {
   padding-top: 10rem;
+} */
+.registration_form form {
+  display: flex;
+  flex-wrap: wrap;
 }
 .input {
   text-align: start;
@@ -2175,7 +2192,6 @@ ul.index_navbar > li {
 .event-heading1 h4 {
   font-size: 50px;
   font-weight: 900;
-  margin-bottom: 60px;
 }
 .event-heading1 p {
   padding-top: 25px;
@@ -2549,7 +2565,7 @@ h2.accordion-header button {
 }
 .donation {
   flex-direction: row;
-  min-width: 270px;
+  /* min-width: 270px; */
   padding-top: 0;
   margin-top: 0;
   line-height: 1.5;
@@ -4356,7 +4372,7 @@ td.calculation-main {
     transform: translateX(0);
     visibility: visible;
   }
-  .tpoffcanvas-area{
+  .tpoffcanvas-area {
     display: block;
   }
   .tpoffcanvas-overlay {
@@ -4367,9 +4383,6 @@ td.calculation-main {
   }
   .logo5 {
     display: none;
-  }
-  .content h1 {
-    font-size: 56px;
   }
   .Navebar2_changes .index_navbar {
     display: none;
@@ -4396,9 +4409,6 @@ td.calculation-main {
   .sec3-content1-hedding h3 {
     width: 100%;
     font-size: clamp(21px, 1.5vw, 36px);
-  }
-  .tag-img > img {
-    width: 100%;
   }
   .tag-text img {
     width: 165px;
@@ -4469,7 +4479,6 @@ td.calculation-main {
     font-size: 27px;
   }
   .card_1 {
-    width: 18rem;
     padding: 30px 30px;
   }
   .main_testimonial > .main_card:nth-child(1) {
@@ -4506,6 +4515,9 @@ td.calculation-main {
 @media screen and (max-width: 991px) {
   .tp_header-right ul > li:nth-child(1) {
     display: none;
+  }
+  .total-donation {
+    justify-content: start;
   }
   .index_navbar {
     display: none;
@@ -4544,8 +4556,6 @@ td.calculation-main {
     margin-bottom: 5rem;
   }
   .card_1 {
-    width: 100%;
-    padding: 30px 50px;
     margin-bottom: 30px;
   }
   .c1-content {
@@ -4690,14 +4700,23 @@ td.calculation-main {
   .navbar-other-content2 > .donateBtn {
     display: none;
   }
+  .tp_header-left2 {
+    width: 100%;
+  }
+  .tp_header-left2 ul {
+    display: flex;
+  }
+  .tp_header-left2 ul li:last-child {
+    margin-left: auto;
+  }
+  .social-icon2 {
+    padding: 0;
+  }
   .main_iner_mcontact {
     padding-left: 170px;
   }
   .tp_header-right {
     display: none;
-  }
-  .content h1 {
-    font-size: 71px;
   }
   button.testimonialBtn.btn.btn-primary {
     margin-bottom: 3rem;
@@ -4749,20 +4768,20 @@ td.calculation-main {
     top: 58px;
     left: 13px;
     width: 80%;
-}
-.logo5 {
-  display: none;
-}
-.logo4 {
-  display: none;
-}
-.logo3 {
-  display: none;
-}
+  }
+  .logo5 {
+    display: none;
+  }
+  .logo4 {
+    display: none;
+  }
+  .logo3 {
+    display: none;
+  }
 
-.add_bar2 {
-  justify-content: center;
-}
+  .add_bar2 {
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 575px) {
   .logo {
@@ -4807,12 +4826,13 @@ td.calculation-main {
   .main_iner_mcontact {
     padding-left: 170px;
   }
+  .shape1 img {
+    left: 60%;
+  }
   .event-heading h4 {
     font-size: clamp(25px, 2vw, 50px);
   }
-  .content h1 {
-    font-size:clamp(45px,3vw,80px);
-  }
+
   .sec5-testimonials {
     padding-left: 1rem;
   }
